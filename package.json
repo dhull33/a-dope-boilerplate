@@ -1,7 +1,8 @@
 {
   "name": "express-webpack-prettier-boilerplate",
   "version": "0.0.1",
-  "private": false,
+  "author": "David Hull",
+  "license": "MIT",
   "scripts": {
     "start": "npm-run-all --parallel open:src:dev prettier-watch",
     "open:src:dev": "nodemon app.js",

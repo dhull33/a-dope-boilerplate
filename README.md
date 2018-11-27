@@ -1,5 +1,7 @@
 # Express-Webpack-Prettier-Boilerplate
 
+Boilerplate intended to help you get started with Express, Webpack, and Prettier using Airbnb's Javascript Guidelines.
+
 #### JavaScript Style Guidelines
 
 We are using Airbnb's JavaScript GuideLine with Eslint, EditorConfig, and Prettier in order to
@@ -34,5 +36,7 @@ Please follow the instructions below and it should be as painless a process as p
 
 - If you would rather have your code be reformatted as you make changes to it while the app is
   running locally you can run `npm start` and everything should work!
-# express-project-skeleton
-# Express-Webpack-Prettier-Boilerplate
+
+#### Issues and Requests
+
+If you find any bugs or would like to request a feature head over to [the issue tracker](https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues).
