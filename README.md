@@ -1,4 +1,4 @@
-# the-hunter-sight
+# Express-Webpack-Prettier-Boilerplate
 
 #### JavaScript Style Guidelines
 
