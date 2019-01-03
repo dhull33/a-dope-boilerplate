@@ -1,4 +1,6 @@
 # Express-Webpack-Prettier-Boilerplate
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate?ref=badge_shield)
+
 
 [![dependencies Status](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate.svg)](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate)
 
@@ -42,3 +44,7 @@ Please follow the instructions below and it should be as painless a process as p
 #### Issues and Requests
 
 If you find any bugs or would like to request a feature head over to [the issue tracker](https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate?ref=badge_large)
