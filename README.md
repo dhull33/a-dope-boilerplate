@@ -1,5 +1,7 @@
 # Express-Webpack-Prettier-Boilerplate
 
+[![dependencies Status](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate.svg)](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate)
+
 Boilerplate intended to help you get started with Express, Webpack, and Prettier using Airbnb's Javascript Guidelines.
 
 #### JavaScript Style Guidelines
