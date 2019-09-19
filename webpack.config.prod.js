@@ -3,10 +3,9 @@ import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 export default {
   devtool: 'source-map',
-  entry: [path.resolve(__dirname, 'app.js')],
-  target: 'web',
+  entry: [path.resolve(__dirname, 'PATH TO DIRECTORY YOU WANT TO START AT')],
   output: {
-    path: path.resolve(__dirname, 'dist/public/'),
+    path: path.resolve(__dirname, 'PATH TO OUTPUT DIRECTORY'),
     publicPath: '/',
     filename: '[name]-[hash].min.js'
   },
@@ -21,11 +20,13 @@ export default {
       {
         test: /\.js$/,
         exclude: '/node_modules/',
-        use: [{ loader: 'babel-loader' }]
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
+        use: ['style-loader', 'css-loader']
       }
     ]
   }

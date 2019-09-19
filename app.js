@@ -1,7 +1,6 @@
 require('dotenv');
 const createError = require('http-errors');
 const express = require('express');
-const Raven = require('raven');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -16,8 +15,6 @@ const indexRouter = require('./routes/index');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// The raven request handler must be the first middleware on the app
-app.use(Raven.requestHandler());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -52,15 +49,8 @@ app.use((req, res, next) => {
 //   res.render('error');
 // });
 
-const port = 1337;
-
-app.listen(port, () => {
-  console.log(`Listening on Port 1337!`);
-  // (async function() {
-  //   const url = await ngrok.connect(port);
-  //   opener(url)
-  // })()
-  console.log(path.join(__dirname, 'views'));
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on Port ${process.env.PORT} 🚀`);
 });
 
 module.exports = app;
