@@ -1,5 +1,5 @@
-import path from 'path'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import path from 'path';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 export default {
   devtool: 'source-map',
@@ -29,4 +29,4 @@ export default {
       }
     ]
   }
-}
+};
