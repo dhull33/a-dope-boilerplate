@@ -12,12 +12,11 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "start:prettier:dev": "npm-run-all --parallel open:src:dev prettier-watch",
     "clean:build:dev": "run-s clean build open:src:dev",
-    "open:src:dev": "nodemon app.js",
+    "open:src:dev": "nodemon bin/www",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "debug": "^4.1.1",
     "dotenv": "^8.1.0",
