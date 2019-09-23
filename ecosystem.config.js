@@ -6,7 +6,7 @@ module.exports = {
   apps: [
     {
       name: 'a-really-cool-name',
-      script: './app.js',
+      script: './bin/www',
       env: {
         NODE_ENV: 'development'
       },
