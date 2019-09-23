@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(enforce.HTTPS({ trustProtoHeader: true })); // eslint-disable-line new-cap
 
 app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
