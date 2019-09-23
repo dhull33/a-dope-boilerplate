@@ -66,6 +66,11 @@
     "*.{js,json,css,md}": [
       "prettier --write",
       "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
     ]
   },
   "babel": {
