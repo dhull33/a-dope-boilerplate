@@ -1,6 +1,7 @@
 {
   "name": "express-webpack-prettier-boilerplate",
-  "version": "0.1.0",
+  "description": "A boilerplate Express.js project that automatically reformats your code using Prettier and Eslint.",
+  "version": "1.0.0",
   "author": "David Hull",
   "license": "MIT",
   "repository": {
