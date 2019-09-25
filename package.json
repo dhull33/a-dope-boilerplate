@@ -29,12 +29,12 @@
     "pm2": "^3.5.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/node": "^7.6.1",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
     "@babel/polyfill": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/register": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
     "ajv": "^6.10.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -54,7 +54,7 @@
     "rimraf": "^3.0.0",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.40.2",
+    "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-middleware": "^3.7.1"
   },
