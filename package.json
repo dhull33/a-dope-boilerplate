@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate"
   },
+  "bugs": {
+    "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues"
+  },
   "scripts": {
     "clean": "rimraf DIRECTORY TO CLEAN OUT",
     "start": "pm2-runtime start ecosystem.config.js --env production",
