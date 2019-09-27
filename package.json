@@ -11,6 +11,11 @@
   "bugs": {
     "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues"
   },
+  "main": "bin/cli.js",
+  "bin": {
+    "create-pretty": "./bin/cli.js"
+  },
+  "preferGlobal": true,
   "scripts": {
     "clean": "rimraf DIRECTORY TO CLEAN OUT",
     "start": "pm2-runtime start ecosystem.config.js --env production",
