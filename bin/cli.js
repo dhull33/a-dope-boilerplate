@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
-const path = require('path');
+// const fs = require('fs-extra');
+// const path = require('path');
 const program = require('commander');
 
 const VERSION = require('../package').version;
 
-console.log(fs);
-console.log(path);
+// console.log(fs);
+// console.log(path);
 
 const main = () => {
   console.log(`this is running`);
@@ -15,7 +15,7 @@ const main = () => {
 };
 
 program
-  .name('create-pretty')
+  .name('create-boiler')
   .version(VERSION, ' --version')
   .usage('[dir]')
   .parse(process.argv);

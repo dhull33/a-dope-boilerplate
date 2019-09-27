@@ -13,7 +13,7 @@
   },
   "main": "bin/cli.js",
   "bin": {
-    "create-pretty": "./bin/cli.js"
+    "create-boiler": "./bin/cli.js"
   },
   "preferGlobal": true,
   "scripts": {
