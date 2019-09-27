@@ -1,7 +1,7 @@
 {
   "name": "a-dope-boilerplate",
   "description": "A boilerplate Express.js project that automatically reformats your code using Prettier and Eslint.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "David Hull",
   "license": "MIT",
   "repository": {
