@@ -1,0 +1,95 @@
+{
+  "name": "a-dope-boilerplate",
+  "description": "A boilerplate Express.js project that automatically reformats your code using Prettier and Eslint.",
+  "version": "1.0.0",
+  "author": "David Hull",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues"
+  },
+  "scripts": {
+    "clean": "rimraf DIRECTORY TO CLEAN OUT",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "start:prettier:dev": "npm-run-all --parallel open:src:dev prettier-watch",
+    "clean:build:dev": "run-s clean build open:src:dev",
+    "open:src:dev": "nodemon bin/www",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
+    "http-errors": "^1.7.3",
+    "morgan": "^1.9.1",
+    "pm2": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "ajv": "^6.10.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.3.0",
+    "nodemon": "^1.19.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-middleware": "^3.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "babel-plugin-transform-class-properties"
+    ]
+  }
+}
