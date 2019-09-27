@@ -1,7 +1,7 @@
-import path from 'path';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-export default {
+module.exports = {
   devtool: 'source-map',
   entry: [path.resolve(__dirname, 'PATH TO DIRECTORY YOU WANT TO START AT')],
   output: {
@@ -10,7 +10,7 @@ export default {
     filename: '[name]-[hash].min.js'
   },
   plugins: [
-    //Minify JS
+    // Minify JS
   ],
   optimization: {
     minimizer: [new UglifyJsPlugin()]
