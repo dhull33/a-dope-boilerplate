@@ -1,15 +1,15 @@
 {
-  "name": "a-dope-boilerplate",
-  "description": "A boilerplate Express.js project that automatically reformats your code using Prettier and Eslint.",
+  "name": "YOUR PROJECT NAME",
+  "description": "",
   "version": "1.0.0",
-  "author": "David Hull",
-  "license": "MIT",
+  "author": "",
+  "license": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate"
+    "url": "URL TO YOUR REPOSITORY"
   },
   "bugs": {
-    "url": "https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues"
+    "url": "URL TO ISSUE TRACKER"
   },
   "scripts": {
     "clean": "rimraf DIRECTORY TO CLEAN OUT",
