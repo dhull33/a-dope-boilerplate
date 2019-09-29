@@ -14,23 +14,30 @@ program
   .usage('[dir]')
   .parse(process.argv);
 
-// TODO: Create function that parses user directory
-// const userDir = () => {};
-const copy = () => {
-  return fs.copy(templateDir, testDir, (err) => {
+const getUserDir = () => {
+  if (process.argv.length === 0) {
+    console.log('Hey where do you want to install me?');
+  }
+  const inpDir = path.join(__dirname, '..', process.argv[0]);
+  console.log(`Installing at ${inpDir}`);
+  return inpDir;
+};
+
+const copy = (userDirectory, templateDir) => {
+  return fs.copy(templateDir, userDirectory, (err) => {
     if (err) {
       return console.error(err);
     }
-    console.log('FUCK YEAH IT WORKED');
+    console.log(`FUCK YEAH IT WORKED`);
   });
 };
 
 const main = () => {
   console.log(`this is running`);
-  console.log(templateDir);
-  console.log(testDir);
+  getUserDir();
   console.log(program.args);
-  copy();
+  copy(testDir, templateDir);
+  console.log(process.cwd());
 };
 
 main();
