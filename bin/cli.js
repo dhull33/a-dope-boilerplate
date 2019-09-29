@@ -9,7 +9,7 @@ const templateDir = path.join(__dirname, '..', 'templates');
 const testDir = path.join(__dirname, '..', 'test');
 
 program
-  .name('create-boiler')
+  .name('dope-boiler')
   .version(VERSION, ' --version')
   .usage('[dir]')
   .parse(process.argv);

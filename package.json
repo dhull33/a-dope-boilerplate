@@ -27,7 +27,7 @@
   },
   "main": "bin/cli.js",
   "bin": {
-    "create-boiler": "./bin/cli.js"
+    "dope-boiler": "./bin/cli.js"
   },
   "preferGlobal": true,
   "scripts": {
