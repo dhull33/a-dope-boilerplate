@@ -3,7 +3,7 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/dhull33/Express-Webpack-Prettier-Boilerplate/badge.svg?targetFile=package.json)](https://snyk.io//test/github/dhull33/Express-Webpack-Prettier-Boilerplate?targetFile=package.json)
 [![dependencies Status](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate.svg)](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate?ref=badge_shield)
 
-Boilerplate intended to help you get started with Express, Webpack, and Prettier using Airbnb's Javascript Guidelines.
+Boilerplate intended to help you get started with Express, Webpack, and Prettier using Google's Javascript Guidelines.
 
 #### This READ.me is under construction!
 
