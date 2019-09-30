@@ -5,7 +5,15 @@
 
 Boilerplate intended to help you get started with Express, Webpack, and Prettier using Google's Javascript Guidelines.
 
-#### This READ.me is under construction!
+### Installation
+
+`$ npm install -g a-dope-boilerplate`
+
+### Get Started
+
+Create your project:
+
+`$ a-dope-boilerplate`
 
 #### Resources
 
