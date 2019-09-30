@@ -27,7 +27,7 @@
   },
   "main": "bin/cli.js",
   "bin": {
-    "dope-boiler": "./bin/cli.js"
+    "a-dope-boilerplate": "./bin/cli.js"
   },
   "preferGlobal": true,
   "scripts": {
@@ -42,7 +42,6 @@
   "dependencies": {
     "commander": "^3.0.2",
     "debug": "^4.1.1",
-    "dotenv": "^8.1.0",
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {
