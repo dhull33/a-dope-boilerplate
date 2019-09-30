@@ -11,7 +11,7 @@ Boilerplate intended to help you get started with Express, Webpack, and Prettier
 
 ### Get Started
 
-Create your project:
+Create your project in the current working directory:
 
 `$ a-dope-boilerplate`
 
