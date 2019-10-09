@@ -3,6 +3,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const program = require('commander');
+const chalk = require('chalk');
 
 const VERSION = require('../package').version;
 const templateDir = path.join(__dirname, '..', 'templates');
@@ -15,28 +16,32 @@ program
   .parse(process.argv);
 
 // TODO: Finish this function
-// const getUserDir = () => {
-//   if (process.argv.length === 0) {
-//     console.log('Hey where do you want to install me?');
-//   }
-//   const inpDir = path.join(__dirname, '..', process.argv[0]);
-//   console.log(`Installing at ${inpDir}`);
-//   return inpDir;
-// };
+const getUserDir = () => {
+  let inpDir = path.join(__dirname, '..', process.argv[0]);
+  if (process.argv.length === 0) {
+    console.log(chalk.red('Nothing was entered'));
+    inpDir = process.cwd();
+  }
+  console.log(chalk.green(`Installing at: ${inpDir}`));
+  return inpDir;
+};
 
-const copy = (currentDirectory, templateDir) => {
-  return fs.copy(templateDir, currentDirectory, (err) => {
+const copy = (installDir, templateDir) => {
+  fs.copy(templateDir, installDir, (err) => {
     if (err) {
       return console.error(err);
     }
     console.log(`Andddddd it worked. Installed Directory: ${process.cwd()}`);
   });
+  return console.log(`Andddddd it worked. Installed Directory: ${installDir}`);
 };
 
 const main = () => {
+  console.log(process.argv);
+  const userDirectory = getUserDir();
   console.log(`aye its working!`);
-  console.log(process.cwd());
-  copy(process.cwd(), templateDir);
+  console.log('Current directory: ' + chalk.blue(process.cwd()));
+  copy(userDirectory, templateDir);
 };
 
 main();

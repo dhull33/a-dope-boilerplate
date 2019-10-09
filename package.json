@@ -40,6 +40,7 @@
     "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "commander": "^3.0.2",
     "debug": "^4.1.1",
     "fs-extra": "^8.1.0"
