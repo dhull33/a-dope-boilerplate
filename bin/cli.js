@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
 const path = require('path');
 const program = require('commander');
 const chalk = require('chalk');
+const fs = require('fs-extra');
 
 const VERSION = require('../package').version;
 const templateDir = path.join(__dirname, '..', 'templates');
