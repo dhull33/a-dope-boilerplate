@@ -3,7 +3,7 @@
 const path = require('path');
 const program = require('commander');
 const chalk = require('chalk');
-const fs = require('fs-extra');
+const fs = require('fs');
 
 const VERSION = require('../package').version;
 const templateDir = path.join(__dirname, '..', 'templates');
