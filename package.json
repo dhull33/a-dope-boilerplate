@@ -31,7 +31,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "start": "/bin/cli.js",
+    "start": "bin/cli.js",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}"
   },
   "dependencies": {
