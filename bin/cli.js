@@ -10,24 +10,24 @@ const VERSION = require('../package').version;
 // const testDir = path.join(__dirname, '..', 'test');
 
 program
-  .name('dope-boiler')
+  .name('a-dope-boilerplate')
   .version(VERSION, ' --version')
   .usage('[dir]')
   .parse(process.argv);
 
 const createDirectory = (path) => {
   if (fs.existsSync(path)) {
-    console.log('It does exists');
-    return 'true';
+    console.log(chalk.red('Directory already exists.'));
+    return true;
   } else {
-    console.log(`Making directory at: ${path}`);
+    console.log(chalk.bgBlue(`Making directory at: ${path}`));
     fs.mkdirSync(path);
   }
 };
 
 const userDir = () => {
   console.log(process.argv.length);
-  let inpDir = path.join(__dirname, '..', `/default`);
+  let inpDir = path.join(__dirname, '..', `/a-dope-boilerplate`);
   if (process.argv.length > 2) {
     inpDir = path.join(__dirname, '..', process.argv[2]);
   }
