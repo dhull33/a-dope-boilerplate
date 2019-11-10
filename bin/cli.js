@@ -3,11 +3,10 @@
 const path = require('path');
 const program = require('commander');
 const chalk = require('chalk');
-const fs = require('fs');
+const fs = require('fs-extra');
 
 const VERSION = require('../package').version;
-// const templateDir = path.join(__dirname, '..', 'templates');
-// const testDir = path.join(__dirname, '..', 'test');
+const templateDir = path.join(__dirname, '..', 'templates');
 
 program
   .name('adp')
@@ -15,46 +14,41 @@ program
   .usage('[dir]')
   .parse(process.argv);
 
-const createDirectory = (path) => {
-  if (fs.existsSync(path)) {
-    console.log(chalk.red('Directory already exists.'));
-    return true;
-  } else {
-    console.log(chalk.bgBlue(`Making directory at: ${path}`));
-    return fs.mkdir(path, { recursive: true }, (err) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-};
+// const createDirectory = (path) => {
+//   if (fs.existsSync(path)) {
+//     console.log(chalk.red('Directory already exists.'));
+//     return true;
+//   } else {
+//     console.log(chalk.bgBlue(`Making directory at: ${path}`));
+//     return fs.mkdir(path, { recursive: true }, (err) => {
+//       if (err) {
+//         throw err;
+//       }
+//     });
+//   }
+// };
 
 const userDir = () => {
-  console.log(process.argv.length);
   let inpDir = path.join(__dirname, '..', `/a-dope-boilerplate`);
   if (process.argv.length > 2) {
     inpDir = path.join(__dirname, '..', process.argv[2]);
   }
-  console.log(chalk.green(`Installing at: ${inpDir}`));
-  createDirectory(inpDir);
+  // createDirectory(inpDir);
+  return inpDir;
 };
 
-// const copy = (installDir, templateDir) => {
-//   // fs.copy(templateDir, installDir, (err) => {
-//   //   if (err) {
-//   //     return console.error(err);
-//   //   }
-//   //   // console.log(`Andddddd it worked. Installed Directory: ${installDir}`);
-//   // });
-//   return console.log(`Andddddd it worked. Installed Directory: ${installDir}`);
-// };
+const copy = (installDir, templateDir) => {
+  return fs.copy(templateDir, installDir, { errorOnExist: false }, (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log('Installed directory:  ' + chalk.blue(installDir));
+  });
+};
 
 const main = () => {
-  console.log(process.argv);
-  console.log('Current directory: ' + chalk.blue(process.cwd()));
-  // copy(userDirectory, templateDir);
-  userDir();
-  console.log(chalk.red(process.argv[2]));
+  const directory = userDir();
+  return copy(directory, templateDir);
 };
 
 main();
