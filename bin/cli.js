@@ -10,7 +10,7 @@ const VERSION = require('../package').version;
 // const testDir = path.join(__dirname, '..', 'test');
 
 program
-  .name('a-dope-boilerplate')
+  .name('adp')
   .version(VERSION, ' --version')
   .usage('[dir]')
   .parse(process.argv);
@@ -21,7 +21,11 @@ const createDirectory = (path) => {
     return true;
   } else {
     console.log(chalk.bgBlue(`Making directory at: ${path}`));
-    fs.mkdirSync(path);
+    return fs.mkdir(path, { recursive: true }, (err) => {
+      if (err) {
+        throw err;
+      }
+    });
   }
 };
 
