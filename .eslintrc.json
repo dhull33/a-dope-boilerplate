@@ -10,7 +10,13 @@
     "ecmaVersion": 2020
   },
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ],
     "no-console": "off",
     "camelcase": "warn",
     "arrow-body-style": ["error", "always"],
