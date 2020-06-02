@@ -49,6 +49,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/register": "^7.10.1",
     "ajv": "^6.12.2",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -91,6 +92,7 @@
     ],
     "*.js": [
       "prettier --write",
+      "eslint --fix",
       "git add"
     ]
   },
