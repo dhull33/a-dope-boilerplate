@@ -12,17 +12,9 @@ module.exports = {
   target: 'web',
   cache: true,
   entry: {
-    accessControl: path.resolve(
-      __dirname,
-      './public/javascript/accessControl/accessControl.js'
-    ),
-    defrag: path.resolve(__dirname, './public/javascript/defrag/defrag.js'),
-    resetCreds: path.resolve(
-      __dirname,
-      './public/javascript/resetCredentials/resetCreds.js'
-    ),
-    styles: path.resolve(__dirname, './public/stylesheets/style.css'),
-    shared: ['./public/javascript/helpers.js']
+    javascripts: path.resolve(__dirname, './public/javascript/YOUR_FILE.js'),
+    styles: path.resolve(__dirname, './public/stylesheets/YOUR_FILE.css'),
+    shared: ['./public/javascript/YOUR_FILE.js']
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -80,9 +72,6 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader
-            // options: {
-            //   publicPath: path.resolve(__dirname, './dist')
-            // }
           },
           { loader: 'css-loader' }
         ]
