@@ -3,7 +3,7 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/dhull33/Express-Webpack-Prettier-Boilerplate/badge.svg?targetFile=package.json)](https://snyk.io//test/github/dhull33/Express-Webpack-Prettier-Boilerplate?targetFile=package.json)
 [![dependencies Status](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate.svg)](https://david-dm.org/dhull33/Express-Webpack-Prettier-Boilerplate) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhull33%2FExpress-Webpack-Prettier-Boilerplate?ref=badge_shield)
 
-Boilerplate intended to help you get started with Express, Webpack, and Prettier using Google's Javascript Guidelines.
+Boilerplate intended to help you get started with Express, Webpack, and Prettier using Airbnb's Javascript Guidelines.
 
 ### Installation
 
@@ -26,7 +26,7 @@ Create your project in the current working directory:
 
 1. Go to [editorconfig.org](https://editorconfig.org/#download) and download the plugin for your
    development environment.
-2. That's it! I have already set up the .editorconfig file in our repository
+2. That's it! I have already set up the .editorconfig file in our repository.
 
 #### Setting Up Everything Else
 
@@ -36,8 +36,8 @@ Create your project in the current working directory:
 
 #### File Watching
 
-- If you would rather have your code be reformatted as you make changes to it while the app is
-  running locally you can run `npm start` and everything should work!
+- If you would rather have your code formatted as you make changes to it while the app is
+  running locally you can run `npm run start:prettier:dev`
 
 #### Issues and Requests
 
