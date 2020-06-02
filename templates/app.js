@@ -1,4 +1,5 @@
-require('dotenv');
+require('dotenv').config();
+const bodyParser = require('body-parser');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -20,6 +21,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// dist is where webpack will put your built files
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Enforces HTTPS
 app.use(enforce.HTTPS({ trustProtoHeader: true })); // eslint-disable-line new-cap
