@@ -6,6 +6,7 @@ const chalk = require('chalk');
 const fs = require('fs-extra');
 
 const VERSION = require('../package').version;
+
 const templateDir = path.join(__dirname, '..', 'templates');
 
 program
@@ -14,40 +15,31 @@ program
   .usage('[dir]')
   .parse(process.argv);
 
-// const createDirectory = (path) => {
-//   if (fs.existsSync(path)) {
-//     console.log(chalk.red('Directory already exists.'));
-//     return true;
-//   } else {
-//     console.log(chalk.bgBlue(`Making directory at: ${path}`));
-//     return fs.mkdir(path, { recursive: true }, (err) => {
-//       if (err) {
-//         throw err;
-//       }
-//     });
-//   }
-// };
-
-const userDir = () => {
+const getDirectory = () => {
   let inpDir = path.join(__dirname, '..', `/a-dope-boilerplate`);
   if (process.argv.length > 2) {
-    inpDir = path.join(__dirname, '..', process.argv[2]);
+    inpDir = path.join(process.argv[2]);
+    const dirParse = path.parse(process.argv[2]);
+    console.log(dirParse);
   }
-  // createDirectory(inpDir);
   return inpDir;
 };
 
-const copy = (installDir, templateDir) => {
-  return fs.copy(templateDir, installDir, { errorOnExist: false }, (err) => {
+const copy = async (installDir, tempDir) => {
+  const copyAsync = await fs.copy(tempDir, installDir, (err) => {
     if (err) {
+      console.log(chalk.red(err.captureStackTrace));
       throw err;
     }
-    console.log('Installed directory:  ' + chalk.blue(installDir));
+    console.log(`Installed directory:  ${chalk.blue(installDir)}`);
   });
+
+  return copyAsync;
 };
 
 const main = () => {
-  const directory = userDir();
+  console.log(process.argv);
+  const directory = getDirectory();
   return copy(directory, templateDir);
 };
 
