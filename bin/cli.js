@@ -7,7 +7,7 @@ const fs = require('fs-extra');
 
 const VERSION = require('../package').version;
 
-const templateDir = path.join(__dirname, '..', 'templates');
+const boilerPlateCode = path.join(__dirname, '..', 'templates');
 
 program
   .name('adp')
@@ -19,19 +19,19 @@ const getDirectory = () => {
   let inpDir = path.join(__dirname, '..', `/a-dope-boilerplate`);
   if (process.argv.length > 2) {
     inpDir = path.join(process.argv[2]);
-    const dirParse = path.parse(process.argv[2]);
-    console.log(dirParse);
   }
   return inpDir;
 };
 
-const copy = async (installDir, tempDir) => {
+const copy = async (installDir, templateDir) => {
   let copyAsync;
+  // const dirParse = path.parse(installDir);
+  // console.log(dirParse);
   try {
-    copyAsync = await fs.copy(tempDir, installDir);
-    console.log(`Installed directory:  ${chalk.blue(installDir)}`);
+    copyAsync = await fs.copy(templateDir, installDir);
+    console.log(`Installed directory:  ${chalk.green(installDir)}`);
   } catch (err) {
-    console.log(chalk.red(err.captureStackTrace));
+    console.log(chalk.red(err));
   }
 
   return copyAsync;
@@ -39,13 +39,11 @@ const copy = async (installDir, tempDir) => {
 
 const main = () => {
   try {
-    console.log(process.argv);
-    // console.log(process.parse())
+    // console.log(process.argv);
     const directory = getDirectory();
-    copy(directory, templateDir);
+    copy(directory, boilerPlateCode);
   } catch (err) {
-    console.log(chalk.red(err.message));
-    console.log(chalk.red(err.captureStackTrace));
+    console.log(chalk.red(err));
   }
 };
 
