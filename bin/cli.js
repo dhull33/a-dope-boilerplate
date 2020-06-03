@@ -25,8 +25,6 @@ const getDirectory = () => {
 
 const copy = async (installDir, templateDir) => {
   let copyAsync;
-  // const dirParse = path.parse(installDir);
-  // console.log(dirParse);
   try {
     copyAsync = await fs.copy(templateDir, installDir);
     console.log(`Installed directory:  ${chalk.green(installDir)}`);
@@ -39,7 +37,6 @@ const copy = async (installDir, templateDir) => {
 
 const main = () => {
   try {
-    // console.log(process.argv);
     const directory = getDirectory();
     copy(directory, boilerPlateCode);
   } catch (err) {

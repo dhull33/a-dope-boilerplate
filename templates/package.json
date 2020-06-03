@@ -15,10 +15,11 @@
     "clean": "rimraf DIRECTORY TO CLEAN OUT",
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "start:prettier:dev": "npm-run-all --parallel open:src:dev prettier-watch",
-    "clean:build:dev": "run-s clean build open:src:dev",
+    "clean:build:dev": "run-s clean build:dev open:src:dev",
     "open:src:dev": "nodemon bin/www",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
-    "build": "webpack --config webpack.config.js"
+    "build:dev": "webpack --config webpack.dev.config.js",
+    "build:prod": "webpack --config webpack.prod.config.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
