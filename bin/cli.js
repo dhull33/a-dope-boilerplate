@@ -26,21 +26,27 @@ const getDirectory = () => {
 };
 
 const copy = async (installDir, tempDir) => {
-  const copyAsync = await fs.copy(tempDir, installDir, (err) => {
-    if (err) {
-      console.log(chalk.red(err.captureStackTrace));
-      throw err;
-    }
+  let copyAsync;
+  try {
+    copyAsync = await fs.copy(tempDir, installDir);
     console.log(`Installed directory:  ${chalk.blue(installDir)}`);
-  });
+  } catch (err) {
+    console.log(chalk.red(err.captureStackTrace));
+  }
 
   return copyAsync;
 };
 
 const main = () => {
-  console.log(process.argv);
-  const directory = getDirectory();
-  return copy(directory, templateDir);
+  try {
+    console.log(process.argv);
+    // console.log(process.parse())
+    const directory = getDirectory();
+    copy(directory, templateDir);
+  } catch (err) {
+    console.log(chalk.red(err.message));
+    console.log(chalk.red(err.captureStackTrace));
+  }
 };
 
 main();

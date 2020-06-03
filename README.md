@@ -7,7 +7,7 @@ Boilerplate intended to help you get started with Express, Webpack, and Prettier
 
 ### Installation
 
-`$ npm install -g a-dope-boilerplate`
+`$ npm install a-dope-boilerplate`
 
 ### Get Started
 
