@@ -82,7 +82,7 @@ For example, to start the express server with nodemon during development:
 
 - Most modern IDEs have plugins for ESLint, Prettier, and EditorConfig. If you install them you can configure your IDE to use the files from this boilerplate.
 
-####Issues and Requests
+## Issues and Requests
 
 If you find any bugs, have a question about usage, or would like to request a feature submit an issue [HERE](https://github.com/dhull33/Express-Webpack-Prettier-Boilerplate/issues)
 
