@@ -1,7 +1,7 @@
 /* eslint-disable  import/no-extraneous-dependencies */
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -24,7 +24,7 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
+    minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
     runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
