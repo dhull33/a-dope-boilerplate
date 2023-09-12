@@ -31,7 +31,7 @@
     "express-sslify": "^1.2.0",
     "http-errors": "~1.8.0",
     "morgan": "~1.10.0",
-    "pm2": "^4.4.0",
+    "pm2": "^5.0.0",
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
